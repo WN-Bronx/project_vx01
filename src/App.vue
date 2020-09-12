@@ -14,7 +14,7 @@
           </form>
           <!-- Mostra as minhas informações adicionadas -->
           <div class="info-list">
-            <addPessoa v-for="i in todos" :key="i.id" :info="i" />
+            <addPessoa v-for="i in todos" :key="i.id" @remove="removePessoa" :info="i" />
           </div>
         </div>  
     </div>  
@@ -38,6 +38,13 @@
           info.id = Date.now();
           this.todos.push(info);
           this.info = { checked: false};
+      }
+    },
+
+    removePessoa(info) {
+      const index = this.todos.findIndex(item => item.id === info.id);
+      if (index > -1) {
+        this.$delete(this.todos, index);
       }
     }
   }

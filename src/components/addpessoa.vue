@@ -9,8 +9,8 @@
             </div> 
         </div>
         <div class="title-action"> <!-- Para executar minha ação -->
-            <button class="btn btn-link">OK</button>
-            <button class="btn btn-link">
+            <button class="btn btn-link">Editar</button>
+            <button @click="$emit('remove', info)" class="btn btn-link">
                 <span class="text-error">Remover</span>
             </button>
         </div>    

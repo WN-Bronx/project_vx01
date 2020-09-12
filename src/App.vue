@@ -34,7 +34,7 @@
 <!-- Scoped so serve para a clase atual-->
 <style scoped>
 .img-logo{
-  max-width: 100px;
+  max-width: 120px;
   margin: 0 auto;
 }
 
